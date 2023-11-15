@@ -29,7 +29,7 @@ class StoreProjectRequest extends FormRequest
             'cover_image' => 'nullable|image|max:20000',
             'git_link' => 'nullable|min:10',
             'project_link' => 'nullable|min:5',
-            'type_id' => 'required',
+            'type_id' => 'nullable',
         ];
     }
 }

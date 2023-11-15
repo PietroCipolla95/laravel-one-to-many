@@ -25,7 +25,10 @@
             <div class="col">
                 <div>
                     <h5 class="py-3">
-                        Type: <span class="text-info">{{ $project->type->name }}</span>
+                        Type:
+                        <span class="text-info">
+                            {{ $project->type_id == null ? 'no type selected' : $project->type?->name }}
+                        </span>
                     </h5>
                     <h4>
                         Description

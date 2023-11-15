@@ -39,7 +39,7 @@
                                 {{ $project->title }}
                             </td>
                             <td>
-                                {{ $project->type->name }}
+                                {{ $project->type_id == null ? 'no type selected' : $project->type?->name }}
                             </td>
                             <td>
                                 <a href="{{ url($project->git_link) }}" class="text-decoration-none text-info">
