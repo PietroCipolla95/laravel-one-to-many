@@ -39,11 +39,10 @@
                     <option selected disabled>Choose category</option>
 
                     @foreach ($types as $type)
-                        <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
+                        <option value="{{ $type->id }}">
                             {{ $type->name }}
                         </option>
                     @endforeach
-
 
                 </select>
             </div>

@@ -8,22 +8,25 @@
         <h1>
             {{ $project->title }}
         </h1>
+
         <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-info mx-5">Edit</a>
     </div>
-
     @include('partials.message')
 
 
     <div class="container my-5">
         <div class="row">
             {{-- left col with preview image --}}
-            <div class="col">
-                <img width="650px" src="{{ asset('storage/' . $project->cover_image) }}"
+            <div class="col-6">
+                <img class="img-fluid" src="{{ asset('storage/' . $project->cover_image) }}"
                     alt="{{ $project->title . 'image' }}">
             </div>
             {{-- right column with description and links --}}
             <div class="col">
                 <div>
+                    <h5 class="py-3">
+                        Type: <span class="text-info">{{ $project->type->name }}</span>
+                    </h5>
                     <h4>
                         Description
                     </h4>

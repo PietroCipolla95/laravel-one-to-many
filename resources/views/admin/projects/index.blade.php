@@ -18,6 +18,7 @@
                         <th>ID</th>
                         <th>Image</th>
                         <th>Title</th>
+                        <th>Type</th>
                         <th>GitHub</th>
                         <th>Project Link</th>
                         <th>Created</th>
@@ -36,6 +37,9 @@
                             </td>
                             <td>
                                 {{ $project->title }}
+                            </td>
+                            <td>
+                                {{ $project->type->name }}
                             </td>
                             <td>
                                 <a href="{{ url($project->git_link) }}" class="text-decoration-none text-info">
@@ -102,7 +106,7 @@
                             </td>
                         </tr>
                     @empty
-                        <h3>
+                        <h3 class="py-3">
                             No projects at the moment
                         </h3>
                     @endforelse

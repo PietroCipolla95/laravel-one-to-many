@@ -38,6 +38,21 @@
                 <small>type description (technology used, purpose etc.)</small>
             </div>
 
+            {{-- type --}}
+            <div class="mb-3">
+                <label for="type_id" class="form-label fw-bold">Project Type</label>
+                <select name="type_id" id="type_id" class="form-select">
+                    <option selected disabled>Choose category</option>
+
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+
+                </select>
+            </div>
+
             {{-- git link --}}
             <div class="mb-3">
                 <label for="git_link" class="form-label fw-bold">GitHub</label>
