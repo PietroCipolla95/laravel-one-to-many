@@ -18,7 +18,7 @@ class TypeSeeder extends Seeder
         foreach ($types as $type) {
             $new_type = new Type();
 
-            $new_type->name = $types;
+            $new_type->name = $type;
 
             $new_type->save();
         }
